@@ -1,0 +1,29 @@
+
+.row-content {
+    margin: 0px auto;
+    padding: 0px 0px;
+    min-height: 400px; }
+
+.col-aligno{
+    text-align: center;
+}
+
+.btn-color{
+    background-color: #497380
+}
+
+.progress-color{
+   background-color: #497380
+}
+
+.jumbotron{
+    background-color: #37A9CC
+}
+
+.img-fluid{
+    margin: 10px auto;
+    padding: 0px 0px;
+    align-items: center;
+   
+}
+

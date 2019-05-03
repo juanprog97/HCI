@@ -1,0 +1,70 @@
+<html>
+<head> 
+    <Title>
+        Mi Aplicacion De Netflix
+    </Title> 
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<meta charset="UTF-8">
+<body>
+    <div class="jumbotron">
+        <div class="container">
+                <div class="row">
+                    <div class="col-xl">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" id="image" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title text-center" id="nombrePeli">NombrePelicula</h5>
+                                <h6 class="card-text text-center" id="anoPeli">Año</h6>
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="progress">
+                                                <div class="progress-bar  progress-color " id="rating" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                            <h6>Rating</h6>
+                                    </div>
+                                </div>         
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-xl">
+                        <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0">Sinopsis</h5>
+                                    <hr>
+                                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                </div>
+                                
+                        </div>
+                        <img src="img/logo.png" height="100" width="200" class="img-fluid " >
+                    </div>
+                    <div class="col-xl">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-10">
+                                    <div class="md-form mt-0" >
+                                        <input class="form-control" type="text" id="textoBuscar" placeholder="Buscar Pelicula.." aria-label="aria-label">
+                                    </div>
+                                </div>
+                                <div class="col-xl-2">
+                                    <button type="button" id="buscar" class="btn btn-color">Buscar</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>    
+    </div>
+    
+</body>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="program.js"></script>	
+</html>
