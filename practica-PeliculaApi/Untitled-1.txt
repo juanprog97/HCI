@@ -1,0 +1,65 @@
+var Data = JSON.parse(data);
+console.log(Data)
+document.getElementById("buscar").onclick = function() {recibirValor()};
+
+var urlSend = "http://www.omdbapi.com/?apikey=db60d42f&";
+
+
+
+var buscar = "t=rocky" 
+infoMovie(urlSend,buscar);
+
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+	var target = $(e.target).attr("href") // activated tab
+    alert(target)
+});
+
+//var p
+//function loadCatalog(value){
+//	for(var i in Data[0].movies){
+////			for(var k in Data[0].movies[i].movies){
+	//			p = Data[0].movies[i].movies[k]
+				//createDom();
+	//		}
+//		}
+//	}
+//}
+//function createDom(){
+////		var
+//	})
+
+//}
+
+
+function infoMovie(url,string){
+	var request = new XMLHttpRequest();
+	request.open('GET', url + string, true);
+	request.onload = function(){
+		var data = JSON.parse(this.response);
+		var textTitle =  document.getElementById('nombrePeli');
+		var textYear  =  document.getElementById('anoPeli');
+		var img 	  =  document.getElementById('image');
+		var rating    =  document.getElementById('rating');
+		textTitle.textContent = data.Title; 
+		textYear.textContent = data.Year;
+		var calificacion = parseFloat(data.imdbRating);
+		var calificacion = (calificacion/10)*100
+		rating.style.width = calificacion+'%';
+		rating.innerHTML = calificacion+'%';
+		img.src = data.Poster;
+
+		
+	};
+	request.send();
+	data
+}
+
+
+function recibirValor(){
+	var ide = document.getElementById('textoBuscar').value;
+	var string = "t="+ ide;
+	infoMovie(urlSend,string);
+};
+
+
+

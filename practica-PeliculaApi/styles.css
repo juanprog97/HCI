@@ -17,7 +17,8 @@
 }
 
 .jumbotron{
-    background-color: #37A9CC
+    background-color:  #FFFBFA ;
+    padding: 100px 0px;
 }
 
 .img-fluid{
@@ -27,3 +28,8 @@
    
 }
 
+.navbar{
+    background-color: #F2EEED;
+    padding: 0px 10px;
+    
+}
