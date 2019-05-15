@@ -4,7 +4,7 @@ document.getElementById('buscar').onclick = function() {recibirValor()};
 
 var urlSend = "http://www.omdbapi.com/?apikey=db60d42f&";
 
-
+var urlgps = "https://cors-anywhere.herokuapp.com/https://neutrinoapi.com/geocode-reverse?user-id=maza&api-key=2ttO7IhSzrAgS9pR001F03STCOj2IsYM6bLbKMpG0ZYXTH5D"
 
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 	var gener = $(e.target).attr("id") // activated tab
@@ -23,6 +23,8 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
 var buscar = "t=rocky" 
 infoMovie(urlSend,buscar);
+
+
 
 
 function getMovie(url,search) {
@@ -174,3 +176,21 @@ function recibirValor(){
 
  
 
+navigator.geolocation.getCurrentPosition(function(position){
+    console.log(position)
+	var lat = position.coords.latitude
+	var long = position.coords.longitude
+
+	var request = new XMLHttpRequest();
+	request.open('GET', urlgps+"&latitude="+lat+"&longitude="+long,true);
+	request.onload = function(){
+		var data  = JSON.parse(this.response)
+		var ela = document.getElementById("ubicacion")
+		ela.innerHTML = data.address + ","+ data.city
+		//console.log(data)
+	}
+	request.send();
+	
+
+	
+})
