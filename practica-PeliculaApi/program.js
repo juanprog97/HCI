@@ -2,7 +2,7 @@ var Data = JSON.parse(data);
 console.log(Data)
 document.getElementById('buscar').onclick = function() {recibirValor()};
 
-var urlSend = "http://www.omdbapi.com/?apikey=db60d42f&";
+var urlSend = "https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?i=tt3896198&apikey=c8f2ab42&";
 
 var urlgps = "https://cors-anywhere.herokuapp.com/https://neutrinoapi.com/geocode-reverse?user-id=maza&api-key=2ttO7IhSzrAgS9pR001F03STCOj2IsYM6bLbKMpG0ZYXTH5D"
 
